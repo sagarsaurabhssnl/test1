@@ -36,6 +36,8 @@ export default class transaction extends React.Component {
     }
 
     initiateBookIssue = async () => {
+                //I have recovered the error.
+
         // alert("calle1S")
         db.collection("transaction").add({
             "studentId": this.state.studentId,
@@ -53,6 +55,7 @@ export default class transaction extends React.Component {
     }
 
     initiateBookReturn = async () => {
+                //I have recovered the error.
         db.collection("transaction").add({
             studentId: this.state.studentId,
             bookId: this.state.bookId,
@@ -69,6 +72,7 @@ export default class transaction extends React.Component {
 
     handleTransaction = async () => {
         console.log("check1")
+        //I have recovered the error.
         await db.collection("book").doc(this.state.bookId).get().then((fetch) => {
             var data = fetch.data();
             console.log(data)
